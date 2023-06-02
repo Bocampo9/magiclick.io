@@ -1,0 +1,340 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.menu-imagen {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    padding: 10px;
+    padding-top: 30px;
+}
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor ul {
+    display: flex;
+    justify-content: center;
+/*     border: 1px solid #000; */
+}
+.contenedor li {
+    list-style: none;
+    letter-spacing: 1px;
+    padding: 0px 10px;
+}
+.contenedor a {
+    font-family: 'Raleway';
+    color: #000;
+    text-decoration: none;
+    font-size: 12px;
+}
+.menu-redes ul {
+    padding-left: 2px;
+}
+.menu-redes a {
+    color: rgb(186, 186, 186);
+    font-size: 23px;
+}
+
+/* section carousel */
+
+
+
+/* section disfruta */
+
+#disfruta a{
+padding: 37px 15px 0px 28px;
+}
+.disfruta-texto{
+    text-align: center;
+}
+.disfruta-texto h2{
+    font-size: 60px;
+    font-weight: 200;
+    margin: 0;
+}
+.disfruta-texto h4{
+    font-size: 40px;
+    font-weight: 200;
+    margin: 0;
+}
+.contenedor-cat {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.cat-cafe {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.img-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: 'Raleway';
+    text-align: center;
+    text-decoration: none;
+}
+.cat-cafe img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.cat-cafe:hover img {
+    transform: scale(1.05);
+} 
+  
+#carousel-dos {
+    margin-left: 200px;
+ }
+ .carousel-dos {
+    width: 80%;
+    display: flex !important;
+    padding: 20px;
+ }
+ .carousel-img {
+    width: 20%; /* 25% width for each item */
+    padding: 10px;
+  }
+  
+  .carousel-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .slick-prev, .slick-next {
+    padding: 0 20px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    color: darkgray;
+  }
+  .carousel-img h3{
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Raleway';
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  /* productos */
+#productos {
+    height: 500px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 70px;
+    background: url(imagenes/banner_home_sec_01.jpg);
+    background-size: cover;
+}
+.contenedor-productos h1{
+    font-size: 68px;
+    font-family: 'Raleway';
+    font-weight: 900;
+    color: #fff;
+}
+.contenedor-productos a{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 9px;
+    border-radius: 10px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 0 3px;
+}
+
+/* seccion servicio */
+
+.contenedor-servicio {
+   height: 425px; 
+   display: flex;
+   width: 90%;
+   margin-left: 70px;
+}
+.contenedor-servicio .servicios{
+    width: 100%;
+    background: url(imagenes/banner_servicio_05.jpg);
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px ;
+
+}
+.contenedor-servicio h2{
+    font-size: 30px;
+    font-weight: 900;
+}
+.contenedor-servicio a {
+    background: #bababa;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px 40px;
+    margin-top: 20px;
+}
+.contenedor-servicio #dos {
+    background: url(imagenes/banner_comprar.jpg);
+    background-size: cover;
+    margin: 25px 10px 0;
+}
+.contenedor-servicio #tres {
+    background: url(imagenes/banner_contacto.jpg);
+    background-size: cover;
+    margin-top: 25px;
+}
+
+/* novedad */
+.contenedor-novedad {
+    width: 90%;
+    height: 280px;
+    background: url(imagenes/banner-novedades-1024x341.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border: 1px solid #000;
+    margin-left: 70px;
+    margin-top: 90px;
+    margin-bottom: 50px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-size 1500ms ease-in-out;
+}
+.contenedor-novedad h1 {
+    font-family: 'Raleway';
+    font-size: 80px;
+    font-weight: 900;
+}
+.contenedor-novedad p {
+    font-family: 'Raleway';
+    font-size: 27px;
+    font-weight: 300;
+}
+.contenedor-novedad a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Raleway';
+    font-weight: 700;
+    background-color: #FFA726;
+    border-color: #02010100;
+    padding: 10px 20px;
+    font-size: 25px;
+    border-radius: 15px;
+}
+
+
+  /* magiclick */
+  #magiclick {
+    width: 90%;
+    margin-left: 70px;
+    align-content: center;
+    margin-bottom: 100px;
+    height: 438px;
+  }
+  .contenedor-magiclick {
+    display: flex;
+  }
+  .izquierda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    
+  }
+  .izquierda h1{
+    font-family: 'Raleway';
+    font-size: 32px;
+    font-weight: 300;
+  }
+  .izquierda p{
+    font-family: 'Raleway';
+    font-size: 18px;
+    color: #73606a;
+    padding: 5px 80px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .izquierda a{
+    text-decoration: none;
+    background: #bababa;
+    color: #fff;
+    padding: 21px 30px;
+  }
+  #carousel-nosotros {
+    width: 90%;
+    margin-left: 70px;
+    margin: 0 auto;
+    padding-bottom: 120px;  
+  }
+  .multiple-items {
+    display: flex !important;
+  }
+.multiple-items img {
+    height: 350px;
+    width: 100%;
+    margin: auto;
+}
+#carousel-nosotros .slick-prev,#carousel-nosotros .slick-next {
+    padding: 0 20px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    color: darkgray;
+  }
+
+#disfruta-hogar {
+    height: 300px;
+    width: 100%;
+    background: #e5efda;
+}
+  #disfruta-hogar .comprar {
+    display: flex;
+justify-content: space-between;
+    align-items: center;
+    padding: 50px 40px 40px 10px;
+
+  }
+  #disfruta-hogar h2{
+    font-size: 32px;
+    font-weight: 300;
+    font-family: 'Raleway';
+    margin-left: 60px;
+
+  }
+  #disfruta-hogar a{
+    text-decoration: none;
+    padding: 20px 35px;
+    color: #fff;
+    background: #feb142;
+    height: 100%;
+    margin-right: 60px;
+  }
+  .hogar-img {
+    display: flex;
+    height: 172px;
+
+  }
+  .hogar-img img {
+    width: 100%;
+  }
