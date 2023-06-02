@@ -32,4 +32,34 @@ $(document).ready(function(){
     nextArrow: '<button type="button" class="slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
   });
 });
+
+/* funcion para que cuando elija una seccion se subraye */
+
+const elementos = document.querySelectorAll('#lista-uno');
+
+elementos.forEach((elemento) => {
+  elemento.addEventListener('click', () => {
+    // Elimina la clase "selected" de todos los elementos
+    elementos.forEach((e) => {
+      e.classList.remove('selected');
+    });
+
+    // Agrega la clase "selected" al elemento seleccionado
+    elemento.classList.add('selected');
+  });
+});
+
+
+/* funcion para que cambie de color cuando pasa el muose por encima */
+const enlaces = document.querySelectorAll('.a-nav-dos');
+
+enlaces.forEach((enlace) => {
+  enlace.addEventListener('mouseover', () => {
+    enlace.style.color = '#FFA726'; /* Cambia el color al pasar el mouse por encima */
+  });
+
+  enlace.addEventListener('mouseout', () => {
+    enlace.style.color = '#000000'; /* Restablece el color al quitar el mouse */
+  });
+});
   
