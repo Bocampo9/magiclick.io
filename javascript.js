@@ -62,4 +62,3 @@ enlaces.forEach((enlace) => {
     enlace.style.color = '#000000'; /* Restablece el color al quitar el mouse */
   });
 });
-  

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/0916a5db50.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -18,29 +18,37 @@
 </head>
 
 <body>
-  <header>
+  <header id="menu-fijo">
     <div class="menu-imagen">
       <img src="imagenes/logo-default.png" alt="">
     </div>
     <div class="contenedor">
       <nav>
-        <ul>
+        <ul id="lista-uno-principal">
           <li id="lista-uno"><a href="">HOME</a></li>
           <li id="lista-uno"><a href="">NOSOTROS</a></li>
-          <li id="lista-uno"><a href="">PRODUCTOS</a></li>
+          <li id="lista-uno"><a href="">PRODUCTOS</a>
+          <ul id="desplegable-menu">
+            <a href="" style="background-color: #ffa726;color: #fff;">CALEFACCIÓN</a>
+            <a href="" style="background: #42a5f5;color:#fff">VENTILACIÓN</a>
+            <a href="" style="background: #ff3366;color: #fff;">BAZAR</a>
+            <a href="" style="background: #8ec351;color: #fff;">JARDÍN</a>
+            <a href="" style="background-color: #fff;color: #000;">CÁTALOGO DE PRODUCTOS</a>
+          </ul>
+          </li>
           <li id="lista-uno"><a href="">CATÁLOGO</a></li>
           <li id="lista-uno"><a href="">CONTACTO</a></li>
           <li id="lista-uno"><a href="">SERVICIO TÉCNICO</a></li>
         </ul>
       </nav>
       <div class="menu-redes">
-        <ul>
-          <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-          <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-          <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-          <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
-          <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
-          <li><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
+        <ul class="menu-iconos">
+          <li><a href=""><i class="fa-brands fa-facebook icono"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-instagram icono"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-twitter icono"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-linkedin icono"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-youtube icono"></i></a></li>
+          <li><a href=""><i class="fa-solid fa-magnifying-glass icono"></i></a></li>
         </ul>
       </div>
     </div>
@@ -94,18 +102,18 @@
         </div>
 
         <div class="cat-cafe">
-          <img src="imagenes/calefaccion-cat.jpeg" alt="">
-          <a href="" class="img-link">CALEFACCION</a>
+          <img src="imagenes/ventilacion-1.jpg" alt="">
+          <a href="" class="img-link">VENTILACIÓN</a>
         </div>
 
         <div class="cat-cafe">
-          <img src="imagenes/calefaccion-cat.jpeg" alt="">
-          <a href="" class="img-link">CALEFACCION</a>
+          <img src="imagenes/bazar-cat.jpg" alt="">
+          <a href="" class="img-link">BAZAR</a>
         </div>
 
         <div class="cat-cafe">
-          <img src="imagenes/calefaccion-cat.jpeg" alt="">
-          <a href="" class="img-link">CALEFACCION</a>
+          <img src="imagenes/jardin-cat.jpg" alt="">
+          <a href="" class="img-link">Jardín</a>
         </div>
       </div>
     </section>
@@ -271,7 +279,7 @@
   <p>¡Suscribite al Newsletter!</p>
   <div class="btn-footer">
   <input type="email" placeholder="Tu email">
-  <button type="submit">SUSCRIBITE</button>
+  <button class="btn-submit" type="submit">SUSCRIBITE</button>
 </div>
 <div class="marca">
   <h1>PRODUCIDO POR BRAIAN OCAMPO</h1 >
