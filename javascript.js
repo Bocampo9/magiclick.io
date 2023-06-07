@@ -62,3 +62,10 @@ enlaces.forEach((enlace) => {
     enlace.style.color = '#000000'; /* Restablece el color al quitar el mouse */
   });
 });
+
+
+$(document).ready(function(){
+  $('.menu-icon-oculto').on('click',function(){
+      $('nav').slideToggle();
+  })
+})
