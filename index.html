@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/0916a5db50.js" crossorigin="anonymous"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link
     href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;900&family=Roboto:wght@100;300&display=swap"
     rel="stylesheet">
@@ -27,16 +28,16 @@
     <div class="contenedor">
       <nav>
         <ul id="lista-uno-principal">
-          <li id="lista-uno"><a href="">HOME</a></li>
-          <li id="lista-uno"><a href="">NOSOTROS</a></li>
-          <li id="lista-uno"><a href="">PRODUCTOS</a>
-          <ul id="desplegable-menu">
-            <a href="" style="background-color: #ffa726;color: #fff;">CALEFACCIÓN</a>
-            <a href="" style="background: #42a5f5;color:#fff">VENTILACIÓN</a>
-            <a href="" style="background: #ff3366;color: #fff;">BAZAR</a>
-            <a href="" style="background: #8ec351;color: #fff;">JARDÍN</a>
-            <a href="" style="background-color: #fff;color: #000;">CÁTALOGO DE PRODUCTOS</a>
-          </ul>
+          <li id="lista-uno"><a href="index.html">HOME</a></li>
+          <li id="lista-uno"><a href="nosotros.html">NOSOTROS</a></li>
+          <li id="lista-uno"><a href="productos.html">PRODUCTOS</a>
+            <ul id="desplegable-menu">
+              <a href="" style="background-color: #ffa726;color: #fff;">CALEFACCIÓN</a>
+              <a href="" style="background: #42a5f5;color:#fff">VENTILACIÓN</a>
+              <a href="productos-bazar.html" style="background: #ff3366;color: #fff;">BAZAR</a>
+              <a href="" style="background: #8ec351;color: #fff;">JARDÍN</a>
+              <a href="" style="background-color: #fff;color: #000;">CÁTALOGO DE PRODUCTOS</a>
+            </ul>
           </li>
           <li id="lista-uno"><a href="">CATÁLOGO</a></li>
           <li id="lista-uno"><a href="">CONTACTO</a></li>
@@ -89,7 +90,7 @@
       <div class="contenedor-disfruta">
         <a href=""><img src="imagenes/iconos_ventilacion-q0nn7s9p4srkkha93rnl3qfcjikghsg9czxhf4n9j4.png" alt=""></a>
         <a href=""><img src="imagenes/iconos_calefaccion-q0nz1k7uw5mdlotjvb8u1sgzhtyy61r5ke8eabcd1c.png" alt=""></a>
-        <a href=""><img src="imagenes/iconos_bazar-q0nn7t7jbmsuw38vya27o86t4wftphjzp4kywelvcw.png" alt=""></a>
+        <a href="productos-bazar.html"><img src="imagenes/iconos_bazar-q0nn7t7jbmsuw38vya27o86t4wftphjzp4kywelvcw.png" alt=""></a>
         <a href=""><img src="imagenes/iconos_jardin-q0nz1ic6ihjsygwa6afkwsy2b287qnjow4xfbrf5ds.png" alt=""></a>
       </div>
       <div class="disfruta-texto">
@@ -109,7 +110,7 @@
 
         <div class="cat-cafe">
           <img src="imagenes/bazar-cat.jpg" alt="">
-          <a href="" class="img-link">BAZAR</a>
+          <a href="productos-bazar.html" class="img-link">BAZAR</a>
         </div>
 
         <div class="cat-cafe">
@@ -161,89 +162,97 @@
       </div>
     </section>
 
-  <section id="productos">
-    <div class="contenedor-productos">
-      <div class="texto"><h1>PRODUCTOS</h1></div>    
-      <div class="botones">
-        <a href="" style="background: #42a5f5;">VENTILACIÓN</a>
-        <a href="" style="background: #ffa726;">CALEFACCION</a>
-        <a href="" style="background: #ff3366;">BAZAR</a>
-        <a href="" style="background: #8ec351;">JARDÍN</a>
+    <section id="productos">
+      <div class="contenedor-productos">
+        <div class="texto">
+          <h1>PRODUCTOS</h1>
+        </div>
+        <div class="botones">
+          <a href="" style="background: #42a5f5;">VENTILACIÓN</a>
+          <a href="" style="background: #ffa726;">CALEFACCION</a>
+          <a href="productos-bazar.html" style="background: #ff3366;">BAZAR</a>
+          <a href="" style="background: #8ec351;">JARDÍN</a>
+        </div>
       </div>
-    </div>
-  </section>
-  <section id="card-servicios">
-    <div class="contenedor-servicio">
-      <div class="servicios">
-        <h2>SERVICIO TECNICO</h2>
-        <a href="">VER MAS</a>
+    </section>
+    <section id="card-servicios">
+      <div class="contenedor-servicio">
+        <div class="servicios">
+          <h2>SERVICIO TECNICO</h2>
+          <a href="">VER MAS</a>
+        </div>
+        <div class="servicios" id="dos">
+          <h2>COMPRAR</h2>
+          <a href="">VER MAS</a>
+        </div>
+        <div class="servicios" id="tres">
+          <h2>CONTACTO</h2>
+          <a href="">VER MAS</a>
+        </div>
       </div>
-      <div class="servicios" id="dos">
-        <h2>COMPRAR</h2>
-        <a href="">VER MAS</a>
+    </section>
+    <section id="novedad">
+      <div class="contenedor-novedad">
+        <h1>NOVEDAD</h1>
+        <p>Este es nuestro producto destacado</p>
+        <a href="">CALOVENTOR RUBI C1111</a>
       </div>
-      <div class="servicios" id="tres">
-        <h2>CONTACTO</h2>
-        <a href="">VER MAS</a>
+    </section>
+    <section id="magiclick">
+      <div class="contenedor-magiclick">
+        <div class="izquierda">
+          <img src="imagenes/logo-default.png" alt="">
+          <h1>SOMOS UNA EMPRESA ARGENTINA</h1>
+          <p>Con 25 años de experiencia, dedicada a la fabricación de una amplia línea de productos que comprenden
+            ventilación, calefacción, jardinería y bazar. Buscamos satisfacer todas las necesidades de nuestros clientes
+            y seguir creciendo en líneas de artículos, tecnología y atención personalizada. Trabajamos día a día para
+            brindar la mejor calidad y servicio a quienes nos eligen y confían en nosotros.</p>
+          <a href="">LEER MÁS</a>
+        </div>
+        <div class="derecha">
+          <iframe width="650" height="436" src="https://www.youtube.com/embed/6ZdJI6YWHJc" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
       </div>
-    </div> 
-  </section>
-  <section id="novedad">
-    <div class="contenedor-novedad">
-      <h1>NOVEDAD</h1>
-      <p>Este es nuestro producto destacado</p>
-      <a href="">CALOVENTOR RUBI C1111</a>
-    </div>
-  </section>
-  <section id="magiclick">
-    <div class="contenedor-magiclick">
-      <div class="izquierda">
-        <img src="imagenes/logo-default.png" alt="">
-        <h1>SOMOS UNA EMPRESA ARGENTINA</h1>
-        <p>Con 25 años de experiencia, dedicada a la fabricación de una amplia línea de productos que comprenden ventilación, calefacción, jardinería y bazar. Buscamos satisfacer todas las necesidades de nuestros clientes y seguir creciendo en líneas de artículos, tecnología y atención personalizada. Trabajamos día a día para brindar la mejor calidad y servicio a quienes nos eligen y confían en nosotros.</p>
-        <a href="">LEER MÁS</a>
+    </section>
+    <section id="carousel-nosotros">
+      <div class="multiple-items">
+        <div class="item">
+          <img src="imagenes/empresa_galeria_01.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="imagenes/empresa_galeria_02.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="imagenes/empresa_galeria_03.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="imagenes/empresa_galeria_04.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="imagenes/empresa_galeria_05.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="imagenes/empresa_galeria_06.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="imagenes/empresa_galeria_07.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="imagenes/empresa_galeria_08.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="imagenes/empresa_galeria_09.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="imagenes/empresa_galeria_10.jpg" alt="">
+        </div>
       </div>
-      <div class="derecha">
-        <iframe width="650" height="436" src="https://www.youtube.com/embed/6ZdJI6YWHJc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-    </div>
-  </section>
-  <section id="carousel-nosotros">
-    <div class="multiple-items">
-      <div class="item">
-        <img src="imagenes/empresa_galeria_01.jpg" alt="">
-      </div>
-      <div class="item">
-        <img src="imagenes/empresa_galeria_02.jpg" alt="">
-      </div>
-      <div class="item">
-        <img src="imagenes/empresa_galeria_03.jpg" alt="">
-      </div>
-      <div class="item">
-        <img src="imagenes/empresa_galeria_04.jpg" alt="">
-      </div>
-      <div class="item">
-        <img src="imagenes/empresa_galeria_05.jpg" alt="">
-      </div>
-      <div class="item">
-        <img src="imagenes/empresa_galeria_06.jpg" alt="">
-      </div>
-      <div class="item">
-        <img src="imagenes/empresa_galeria_07.jpg" alt="">
-      </div>
-      <div class="item">
-        <img src="imagenes/empresa_galeria_08.jpg" alt="">
-      </div>
-      <div class="item">
-        <img src="imagenes/empresa_galeria_09.jpg" alt="">
-      </div>
-      <div class="item">
-        <img src="imagenes/empresa_galeria_10.jpg" alt="">
-      </div>
-    </div>
-    
-  </section>
-  <section id="disfruta-hogar">
+
+    </section>
+    <section id="disfruta-hogar">
       <div class="comprar">
         <h2>¡Disfrutá tu hogar!</h2>
         <a href="">COMPRAR</a>
@@ -258,46 +267,47 @@
         <img class="imagen-final" src="imagenes/DSC_1400-scaled.jpg" alt="" srcset="">
         <img class="imagen-final" src="imagenes/empresa_galeria_01.jpg" alt="" srcset="">
       </div>
-  </section>
-  <section id="nav-dos">
-    <img src="imagenes/logo-default.png" alt="">
-    <div class="contenedor-nav-dos">
-      <nav>
-        <ul>
-          <li><a href="" class="a-nav-dos">HOME</a></li>
-          <li><a href="" class="a-nav-dos">NOSOTROS</a></li>
-          <li><a href="" class="a-nav-dos">VENTILACION</a></li>
-          <li><a href="" class="a-nav-dos">CALEFACCION</a></li>
-          <li><a href="" class="a-nav-dos">BAZAR</a></li>
-          <li><a href="" class="a-nav-dos">JARDIN</a></li>
-          <li><a href="" class="a-nav-dos">SERVICE</a></li>
-          <li><a href="" class="a-nav-dos">CONTACTO</a></li>
-        </ul>
-      </nav>
+    </section>
+    <section id="nav-dos">
+      <img src="imagenes/logo-default.png" alt="">
+      <div class="contenedor-nav-dos">
+        <nav>
+          <ul>
+            <li><a href="index.html" class="a-nav-dos">HOME</a></li>
+            <li><a href="nosotros.html" class="a-nav-dos">NOSOTROS</a></li>
+            <li><a href="" class="a-nav-dos">VENTILACION</a></li>
+            <li><a href="" class="a-nav-dos">CALEFACCION</a></li>
+            <li><a href="productos-bazar.html" class="a-nav-dos">BAZAR</a></li>
+            <li><a href="" class="a-nav-dos">JARDIN</a></li>
+            <li><a href="" class="a-nav-dos">SERVICE</a></li>
+            <li><a href="" class="a-nav-dos">CONTACTO</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <h2>¡No te pierdas nuestras novedades!</h2>
+    <p>¡Suscribite al Newsletter!</p>
+    <div class="btn-footer">
+      <input type="email" placeholder="Tu email">
+      <button class="btn-submit" type="submit">SUSCRIBITE</button>
     </div>
-  </section>
-<footer>
-  <h2>¡No te pierdas nuestras novedades!</h2>
-  <p>¡Suscribite al Newsletter!</p>
-  <div class="btn-footer">
-  <input type="email" placeholder="Tu email">
-  <button class="btn-submit" type="submit">SUSCRIBITE</button>
-</div>
-<div class="whatsapp">
-  <a href="https://api.whatsapp.com/send?phone=TUNUMERO" class="whatsapp-link">
-    <img src="imagenes/descarga.png" alt="WhatsApp" class="whatsapp-logo">
-  </a>
-  
-</div>
-<div class="marca">
-  <h1>PRODUCIDO POR BRAIAN OCAMPO</h1 >
-</div>
-</footer>
+    <div class="whatsapp">
+      <a href="https://api.whatsapp.com/send?phone=TUNUMERO" class="whatsapp-link">
+        <img src="imagenes/descarga.png" alt="WhatsApp" class="whatsapp-logo">
+      </a>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    </div>
+    <div class="marca">
+      <h1>PRODUCIDO POR BRAIAN OCAMPO</h1>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="javascript.js"></script>
+  <script src="javascript.js"></script>
 </body>
 
 </html>

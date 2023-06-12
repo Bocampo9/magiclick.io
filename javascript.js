@@ -22,7 +22,7 @@ $(document).ready(function(){
     ]
   });
 });
-$(document).ready(function(){
+$(window).on("load",function(){
 
   $('.multiple-items').slick({
     infinite: true,
@@ -30,25 +30,22 @@ $(document).ready(function(){
     slidesToScroll: 3,
     prevArrow: '<button type="button" class="slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
     nextArrow: '<button type="button" class="slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 });
-
-/* funcion para que cuando elija una seccion se subraye */
-
-const elementos = document.querySelectorAll('#lista-uno');
-
-elementos.forEach((elemento) => {
-  elemento.addEventListener('click', () => {
-    // Elimina la clase "selected" de todos los elementos
-    elementos.forEach((e) => {
-      e.classList.remove('selected');
-    });
-
-    // Agrega la clase "selected" al elemento seleccionado
-    elemento.classList.add('selected');
-  });
-});
-
 
 /* funcion para que cambie de color cuando pasa el muose por encima */
 const enlaces = document.querySelectorAll('.a-nav-dos');
