@@ -104,7 +104,7 @@ body {
 
 /* section buscar */
 #buscar {
-    background: #FBF2F6;
+    background: #caedfc;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,7 +118,7 @@ body {
 }
 #buscar p{
     font-size: 30px;
-    color: #FF3366;
+    color: #42A5F5;
     margin-right: 30px;
 }
 #buscar input {
@@ -149,31 +149,36 @@ body {
 }
 .objeto {
     position: relative;
+    cursor: pointer;
 }
 
 .objeto .texto {
     position: absolute;
-    top: 85%;
-    left: 30%;
-    text-decoration: none;
-    color: #363636;
+    color: #42A5F5;
+    width: 80%;
+    height: auto;
+    font-weight: 600;
     font-family: 'Raleway';
-    font-size: 20px;
+    font-size: 25px;
+    text-decoration: none;
     letter-spacing: 1px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
 }
 .objeto:hover .texto {
-  color: #FF3366;
+      display: block;
 }
 .objeto img{
     width: 100%;
     border-radius: 50%;
     height: 300px;
-    border-top:4px solid #FF3366;
-    filter: brightness(100%);
+    border-top:10px solid #42A5F5;
     transition: filter 0.5s;
 }
 .objeto:hover img {
-  filter: brightness(117%);
+  filter: brightness(40%);
 }
 /* modal */
 #modal1 {
@@ -220,7 +225,7 @@ body {
 .modal-content h2{
     color: #fff !important;
     font-family: "Raleway" !important;
-    background-color: #FF3366;
+    background-color: #42A5F5;
     font-size: 27px;
     padding: 8px 43px;
     border-radius: 15px;
@@ -235,7 +240,7 @@ body {
     margin-top: 10px;
 }
 .modal-content h3{
-    color: #FF3366;
+    color: #42A5F5;
     font-weight: bold;
     font-size: 19px;
 
@@ -257,15 +262,15 @@ body {
 }
 .descripcion li::before {
     content: "\2022";
-    color: #FF3366;
+    color: #42A5F5;
     position: absolute;
     left: -17px;
     font-size: 30px;
     top: -13px; /* Ajusta la posición horizontal del punto */
   }
 .modal-content .industria {
-    width: 70px;
-    height: 70px;
+    width: 200px;
+    height: 100px;
 }
 .catalogo {
     display: flex;
@@ -274,7 +279,7 @@ body {
 }
 .catalogo button{
     font-size: 10px;
-    color: #ff3366;
+    color: #42A5F5;
     margin-top: 10px;
     border:none;
     border-radius: 10px;

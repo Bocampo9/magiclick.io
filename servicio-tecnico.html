@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <link rel="stylesheet" href="servicio-tecnico.css">
+
+    <script src="https://kit.fontawesome.com/0916a5db50.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;900&family=Roboto:wght@100;300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-pz3d3gL2+x3E4w5LDoKRj/Yd6tmh00lNtC/ewvYw1G63LOjUfC3YdHokpBZ11sT8tiPB5ucu2yvUl9WnTpmK3Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="menu-fijo">
+        <div class="menu-imagen">
+            <p class="menu-icon-oculto"><i class="fa-solid fa-bars"></i></p>
+            <img src="imagenes/logo-default.png" class="menu-magiclick" alt="">
+            <a href="" class="buscar"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+        <div class="contenedor">
+            <nav>
+                <ul id="lista-uno-principal">
+                    <li id="lista-uno"><a href="index.html">HOME</a></li>
+                    <li id="lista-uno"><a href="nosotros.html">NOSOTROS</a></li>
+                    <li id="lista-uno"><a href="productos.html">PRODUCTOS</a>
+                        <ul id="desplegable-menu">
+                            <a href="" style="background-color: #ffa726;color: #fff;">CALEFACCIÓN</a>
+                            <a href="productos-ventilacion.html" style="background: #42a5f5;color:#fff">VENTILACIÓN</a>
+                            <a href="productos-bazar.html" style="background: #ff3366;color: #fff;">BAZAR</a>
+                            <a href="" style="background: #8ec351;color: #fff;">JARDÍN</a>
+                            <a href="" style="background-color: #fff;color: #000;">CÁTALOGO DE PRODUCTOS</a>
+                        </ul>
+                    </li>
+                    <li id="lista-uno"><a href="">CATÁLOGO</a></li>
+                    <li id="lista-uno"><a href="contacto.html">CONTACTO</a></li>
+                    <li id="lista-uno"><a href="servicio-tecnico.html">SERVICIO TÉCNICO</a></li>
+                </ul>
+            </nav>
+            <div class="menu-redes">
+                <ul class="menu-iconos">
+                    <li><a href=""><i class="fa-brands fa-facebook icono"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram icono"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter icono"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-linkedin icono"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-youtube icono"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-magnifying-glass icono"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="productos">
+            <img src="imagenes/atencion-al-cliente-2-1-scaled.jpg" alt="">
+            <div class="text-somos">
+                <h2>SERVICIO TECNICO</h2>
+            </div>
+        </section>
+        <section id="mapa-servicio">
+            <h3>ENCONTRA EL SERVICE MAS CERCANO</h3>
+            <div id="map">
+            </div>
+        </section>
+        <section id="nav-dos">
+            <img src="imagenes/logo-default.png" alt="">
+            <div class="contenedor-nav-dos">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="a-nav-dos">HOME</a></li>
+                        <li><a href="nosotros.html" class="a-nav-dos">NOSOTROS</a></li>
+                        <li><a href="productos-ventilacion.html" class="a-nav-dos">VENTILACION</a></li>
+                        <li><a href="" class="a-nav-dos">CALEFACCION</a></li>
+                        <li><a href="productos-bazar.html" class="a-nav-dos">BAZAR</a></li>
+                        <li><a href="" class="a-nav-dos">JARDIN</a></li>
+                        <li><a href="servicio-tecnico.html" class="a-nav-dos">SERVICE</a></li>
+                        <li><a href="contacto.html" class="a-nav-dos">CONTACTO</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h2>¡No te pierdas nuestras novedades!</h2>
+        <p>¡Suscribite al Newsletter!</p>
+        <div class="btn-footer">
+            <input type="email" placeholder="Tu email">
+            <button class="btn-submit" type="submit">SUSCRIBITE</button>
+        </div>
+        <div class="whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=TUNUMERO" class="whatsapp-link">
+                <img src="imagenes/descarga.png" alt="WhatsApp" class="whatsapp-logo">
+            </a>
+
+        </div>
+        <div class="marca">
+            <h1>PRODUCIDO POR BRAIAN OCAMPO</h1>
+        </div>
+    </footer>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPCVoWneF4J-UCwuNe4VyZ4Zx_WiUD8hE&callback=initMap"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="servicio-tecnico.js"></script>
+</body>
+
+</html>
