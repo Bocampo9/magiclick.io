@@ -17,14 +17,19 @@
     rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
   <title>Magiclick | Nosotros</title>
 </head>
 
 <body>
-  <header id="menu-fijo">
+  <header class="menu-fijo" style="background-color: #fff;">
     <div class="menu-imagen">
       <p class="menu-icon-oculto"><i class="fa-solid fa-bars"></i></p>
-      <img src="imagenes/logo-default.png" class="menu-magiclick" alt="">
+      <img src="imagenes/logo-default.png" class="menu-magiclick animate__animated animate__fadeInLeft" alt="">
       <a href="" class="buscar"><i class="fa-solid fa-magnifying-glass"></i></a>
     </div>
     <div class="contenedor">
@@ -32,10 +37,10 @@
         <ul id="lista-uno-principal">
           <li id="lista-uno"><a href="index.html">HOME</a></li>
           <li id="lista-uno"><a href="nosotros.html">NOSOTROS</a></li>
-          <li id="lista-uno"><a href="productos.html">PRODUCTOS</a>
+          <li id="lista-uno" class="lista-desplegable"><a href="productos.html">PRODUCTOS</a>
             <ul id="desplegable-menu">
               <a href="" style="background-color: #ffa726;color: #fff;">CALEFACCIÓN</a>
-              <a href="" style="background: #42a5f5;color:#fff">VENTILACIÓN</a>
+              <a href="productos-ventilacion.html" style="background: #42a5f5;color:#fff">VENTILACIÓN</a>
               <a href="productos-bazar.html" style="background: #ff3366;color: #fff;">BAZAR</a>
               <a href="" style="background: #8ec351;color: #fff;">JARDÍN</a>
               <a href="" style="background-color: #fff;color: #000;">CÁTALOGO DE PRODUCTOS</a>
@@ -48,11 +53,11 @@
       </nav>
       <div class="menu-redes">
         <ul class="menu-iconos">
-          <li><a href=""><i class="fa-brands fa-facebook icono"></i></a></li>
-          <li><a href=""><i class="fa-brands fa-instagram icono"></i></a></li>
-          <li><a href=""><i class="fa-brands fa-twitter icono"></i></a></li>
-          <li><a href=""><i class="fa-brands fa-linkedin icono"></i></a></li>
-          <li><a href=""><i class="fa-brands fa-youtube icono"></i></a></li>
+          <li><a href="https://www.facebook.com/magiclickar" target="_blank"><i class="fa-brands fa-facebook icono"></i></a></li>
+          <li><a href="https://www.instagram.com/magiclickar/" target="_blank"><i class="fa-brands fa-instagram icono"></i></a></li>
+          <li><a href="https://twitter.com/Magiclickar" target="_blank"><i class="fa-brands fa-twitter icono"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/magiclick/" target="_blank"><i class="fa-brands fa-linkedin icono"></i></a></li>
+          <li><a href="https://www.youtube.com/@MagiclickArgentina" target="_blank"><i class="fa-brands fa-youtube icono"></i></a></li>
           <li><a href=""><i class="fa-solid fa-magnifying-glass icono"></i></a></li>
         </ul>
       </div>
@@ -61,11 +66,10 @@
   <main>
     <section>
       <div class="quienes-somos">
-        <iframe
-          src="https://www.youtube.com/embed/zVJXaz0LEkw?controls=0&rel=0&playsinline=1&enablejsapi=1&origin=https%3A%2F%2Fmagiclick.com.ar&widgetid=3"
-          frameborder="0"></iframe>
+        <div class="video-overlay"></div>
+        <iframe id="video-iframe" src="https://www.youtube.com/embed/zVJXaz0LEkw?controls=0&rel=0&playsinline=1&enablejsapi=1&origin=https%3A%2F%2Fmagiclick.com.ar&widgetid=3" frameborder="0"></iframe>
         <div class="text-somos">
-          <h2>QUIÉNES SOMOS</h2>
+          <h2 id="video-toggle">QUIÉNES SOMOS</h2>
         </div>
       </div>
     </section>
@@ -74,7 +78,7 @@
         <img src="imagenes/logo-default.png" alt="">
         <p>FAMIEL SA es una empresa argentina, con 25 años de experiencia, dedicada a la fabricación de una amplia línea
           de productos que comprenden ventilación, calefacción, jardinería y bazar.</p>
-        <iframe width="90%" height="700" src="https://www.youtube.com/embed/6ZdJI6YWHJc" title="YouTube video player"
+        <iframe width="90%" height="600" src="https://www.youtube.com/embed/6ZdJI6YWHJc" title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen></iframe>
@@ -167,11 +171,13 @@
 
 
   <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPCVoWneF4J-UCwuNe4VyZ4Zx_WiUD8hE&callback=initMap"></script>
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPCVoWneF4J-UCwuNe4VyZ4Zx_WiUD8hE&callback=initMap"></script>
+   
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="nosotros.js"></script>
 </body>
 

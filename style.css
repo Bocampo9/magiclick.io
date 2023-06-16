@@ -11,20 +11,23 @@ body {
   text-decoration: none;
   font-size: 18px;
 }
-.menu-imagen {
-    display: flex;
-    justify-content: center;
-    height: 80px;
-    padding: 30px;
-    margin-bottom: 20px;
-}
 .menu-magiclick {
   height: 60px;
 }
-.contenedor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.menu-fijo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.menu-fijo .contenedor {
+  display: flex;
+  align-items: center;
+  padding-top: 14px;
 }
 
 .contenedor ul {
@@ -47,7 +50,8 @@ body {
 #desplegable-menu{
   display: none;
   position: absolute;
-  left: 162px;
+  left: 153px;
+
 }
 #desplegable-menu a {
   padding: 15px 20px;
@@ -55,6 +59,10 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
+  transition: filter 0.3s ease-in-out;
+}
+#desplegable-menu a:hover {
+  filter: brightness(115%);
 }
 
 #lista-uno-principal li:nth-child(3):hover #desplegable-menu {
@@ -79,8 +87,9 @@ body {
   transform: scale(1.2);
 }
 /* section carousel */
-
-
+section#carousel-inicio {
+  padding-top: 80px;
+}
 
 /* section disfruta */
 
@@ -134,19 +143,16 @@ padding: 37px 15px 0px 28px;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease;   
 }
 .cat-cafe:hover img {
     transform: scale(1.05);
+    filter: brightness(70%);
 } 
-  
-#carousel-dos {
-    margin-left: 200px;
- }
  .carousel-dos {
-    width: 80%;
+    width: 90%;
     display: flex !important;
-    padding: 20px;
+    margin: 0 auto;
  }
  .carousel-img {
     width: 20%; /* 25% width for each item */
@@ -175,23 +181,46 @@ padding: 37px 15px 0px 28px;
   }
 
   /* productos */
-#productos {
+  #productos {
     height: 500px;
     width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 70px;
-    background: url(imagenes/banner_home_sec_01.jpg);
+    margin: 0 auto;
+    background-image: url(imagenes/banner_home_sec_01.jpg);
     background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
-.contenedor-productos h1{
+
+#productos::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0.8; /* Ajusta el valor de opacidad según tu preferencia */
+    z-index: 1;
+}
+
+.contenedor-productos {
+    position: relative;
+    z-index: 2;
+}
+
+.contenedor-productos h1 {
     font-size: 68px;
     font-family: 'Raleway';
     font-weight: 900;
     color: #fff;
 }
-.contenedor-productos a{
+
+.contenedor-productos a {
     color: #fff;
     font-weight: 700;
     text-decoration: none;
@@ -200,11 +229,18 @@ padding: 37px 15px 0px 28px;
     font-size: 14px;
     letter-spacing: 1px;
     margin: 0 3px;
-
 }
+.botones a:hover{
+  filter: brightness(115%);
+}
+
 
 /* seccion servicio */
 
+#card-servicios {
+  background-image: url(imagenes/home-background-img-4.png);
+  padding: 50px 0;
+}
 .contenedor-servicio {
    height: 425px; 
    display: flex;
@@ -235,7 +271,7 @@ padding: 37px 15px 0px 28px;
     margin-top: 20px;
     font-size: 13px;
 }
-.servicios:hover a{
+.contenedor-servicio a:hover{
   color: #363636;
 }
 .contenedor-servicio #dos {
@@ -253,10 +289,11 @@ padding: 37px 15px 0px 28px;
 #novedad {
   overflow: hidden;
   width: 90%;
-  margin: 70px 70px;
+  margin: 0 auto;
+  margin: 70px 70px ;
 }
 .contenedor-novedad {
-
+    position: relative;
     height: 280px;
     background: url(imagenes/banner-novedades-1024x341.png);
     background-size: cover;
@@ -271,12 +308,12 @@ padding: 37px 15px 0px 28px;
 }
 .contenedor-novedad:hover {
   transform: scale(1.1);
-  opacity: calc();
 }
 .contenedor-novedad h1 {
-    font-family: 'Raleway';
+    font-family: 'Raleway'; 
     font-size: 80px;
     font-weight: 900;
+    
 }
 .contenedor-novedad p {
     font-family: 'Raleway';
@@ -335,15 +372,14 @@ padding: 37px 15px 0px 28px;
     margin-top: 17px;
     font-size: 13px;
   }
-  .izquierda:hover a {
+  .izquierda a:hover {
     color: #363636;
   }
 
   /* carousel-nosotros */
 
   #carousel-nosotros {
-    width: 90%;
-    margin-left: 70px;
+    width: 100%;
     margin: 0 auto;
     padding-bottom: 120px;  
   }
@@ -516,19 +552,31 @@ font-size: 13px;
 @media screen and (max-width: 800px){
 
   /* responsive nav */
-
-  /* responsive nav */
-
-  .menu-imagen {
-    justify-content: space-evenly;
+  .menu-fijo {
+    display: inline;
+    justify-content: center;
     align-items: center;
-    padding: 10px;
-    padding-top: 22px;
+    height: auto;
+    position: relative;
+    z-index: 999;
+    width: 100%;
+    box-shadow:none;
 }
-  .menu-icon-oculto {
-    display: block;
-    margin-right: 23px;
-    margin-top: 15px;
+.menu-fijo .contenedor {
+  padding-top: 0px;
+}
+.menu-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.menu-magiclick {
+  font-size: 10px;
+}
+.menu-icon-oculto {
+  display: block;
+  margin-top: 15px;
 }
 .buscar {
   display: block;
@@ -537,17 +585,19 @@ font-size: 13px;
 .contenedor {
   justify-content: start;
   margin-left: -9px;
-
-  
+  padding-top: 0px;
+}
+.contenedor nav {
+  position: relative;
+  width: 95%;
 }
 .contenedor ul {
   flex-direction: column;
   
 }
 .contenedor li {
-  text-underline-position: under;
-  text-decoration: underline 2px #939AA9;
-  width: 100%;
+  padding: 0;
+  border-bottom: 1px solid #a7a8aa;
 }
 .contenedor a {
   font-size: 11px;
@@ -556,40 +606,47 @@ font-size: 13px;
 #lista-uno-principal:hover li {
   color: #feb142;
 }
+nav {
+  display: none;
+}
 .menu-redes {
   display: none;
 }
 
+section#carousel-inicio {
+  padding-top: 12px;
+}
+.carousel-item.active {
+  height: 165px !important;
+}
  /* responsive disfruta */
 
-.contenedor-disfruta img {
-  height: 70px;
+ .contenedor-disfruta img {
+  height: 50px;
   margin-top: 9px;
 }
  #disfruta a {
   padding: 0px 0px 19px 0px;
 }
+.disfruta-texto h2 {
+  font-size: 29px;
+  font-weight: 300;
+}
+.disfruta-texto h4 {
+  font-size: 18px;
+
+}
 .contenedor-cat {
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 32px;
   max-width: 80%;
-}
-#carousel-dos {
-  margin-left: 0;
-}
-.carousel-dos {
-  width: 90%;
-  left: 18px;
+  padding-top: 29px;
 }
 
 /* responsive productos */
 
 #productos {
-  height: 160px;
-  width: 81%;
-  margin-left: 36px;
-  background-size: contain;
-  background-repeat: no-repeat;
+display: none;
 }
 .contenedor-productos h1 {
   text-align: center;
@@ -662,29 +719,29 @@ display: none;
 }
 
 footer {
-  margin-top: 30px;
+  padding-top: 15px;
 }
 footer h2 {
-  font-size: 25px;
+  font-size: 21px;
   font-weight: 300;
 }
 footer p {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 300;
 }
-
+.btn-footer {
+  padding-bottom: 14px;
+}
 footer button {
-  height: 39px;
-  margin-left: 2px;
-  padding: 0 50px 0 45px;
+  height: 31px;
+  margin-left: 0px;
+  padding: 0 45px 0 45px;
 }
 footer input {
   width: 66%;
-  height: 47px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 11px;
-  margin-bottom: 10px;
+  height: 40px;
+  padding-top: 13px;
+  padding-bottom: 13px;
 }
 
 .marca h1 {
