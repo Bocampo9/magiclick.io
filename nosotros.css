@@ -115,6 +115,10 @@ transform: scale(1.2);
 }
 
 /* section historia */
+.historia iframe {
+  width:90%;
+  height: 600px;
+}
 
 .historia .conteiner {
     display: flex;
@@ -212,7 +216,7 @@ transform: scale(1.2);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top:90px;
+  padding-top:40px;
   padding-bottom: 10px;
 }
 .contenedor-nav-dos ul{
@@ -383,61 +387,79 @@ nav {
   height: 250px;
 }
 .text-somos h2 {
+  text-align: center;
   font-size: 33px;
-  background: #939AA9;
+}
+.historia .conteiner {
+  margin-top: 20px;
+}
+.historia img {
+  width: 45%;
 }
 .historia p {
   text-align: center;
   color: #939AA9;
   font-size: 14px;
   font-family: 'Raleway';
-  width: 75%;
+  width: 90%;
   padding: 0px;
-  margin: 26px 0px;
+  margin: 14px 0px;
 }
-iframe {
-  border: 0px;
+.historia iframe {
   height: 250px;
 }
-
+.contenedor img {
+  width: 30%;
+}
 #certificaciones h3 {
-  font-size: 19px;
+  font-size: 13px;
+  margin: 0px;
 }
 #certificaciones p {
   margin: 4px 0;
-  font-size: 12px;
+  font-size: 11px;
 }
-
 #carousel-nosotros {
-  padding-bottom: 42px;
+  padding-bottom: 20px;
+}
+.slick-slide {
+    height: 250px !important;
+}
+#mapa h3 {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+#mapa {
+  height: 250px !important;
+  margin-bottom: 15px;
 }
 #nav-dos {
-display: none;
-}
+  display: none;
+  }
 footer {
-  margin-top: 30px;
+  padding-top: 15px;
 }
 footer h2 {
-  font-size: 25px;
+  font-size: 21px;
   font-weight: 300;
 }
 footer p {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 300;
 }
-
+.btn-footer {
+  padding-bottom: 14px;
+}
 footer button {
-  height: 39px;
-  margin-left: 2px;
-  padding: 0 50px 0 45px;
+  height: 31px;
+  margin-left: 0px;
+  padding: 0 45px 0 45px;
 }
 footer input {
   width: 66%;
-  height: 47px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 11px;
-  margin-bottom: 10px;
+  height: 40px;
+  padding-top: 13px;
+  padding-bottom: 13px;
 }
 
 .marca h1 {

@@ -8,18 +8,21 @@ $(document).ready(function(){
 // Obtener el botón de cierre del modal
 var closeButton = document.querySelector('.close');
 
-// Obtener todos los enlaces con atributo data-target
-var links = document.querySelectorAll('a[data-target]');
+// Obtener las imágenes y los enlaces
+var imageModal = document.querySelector('.img-modal');
+var linkModal = document.querySelector('.objeto a[data-target]');
 
-// Recorrer los enlaces y agregar evento de clic
-links.forEach(function (link) {
-  link.addEventListener('click', function (event) {
-    event.preventDefault();
-    var target = this.getAttribute('data-target');
-    var modal = document.getElementById(target);
-    modal.style.display = "block";
-  });
-});
+// Función para abrir el modal
+function openModal(event) {
+  event.preventDefault();
+  var target = this.getAttribute('data-target');
+  var modal = document.getElementById(target);
+  modal.style.display = "block";
+}
+
+// Agregar evento de clic a la imagen y al enlace
+imageModal.addEventListener('click', openModal);
+linkModal.addEventListener('click', openModal);
 
 // Agregar evento de clic al botón de cierre para cerrar el modal
 closeButton.addEventListener('click', function () {

@@ -20,10 +20,10 @@
 </head>
 
 <body>
-    <header id="menu-fijo">
+    <header class="menu-fijo" style="background-color: #fff;">
         <div class="menu-imagen">
             <p class="menu-icon-oculto"><i class="fa-solid fa-bars"></i></p>
-            <img src="imagenes/logo-default.png" class="menu-magiclick" alt="">
+            <img src="imagenes/logo-default.png" class="menu-magiclick animate__animated animate__fadeInLeft" alt="">
             <a href="" class="buscar"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
         <div class="contenedor">
@@ -31,10 +31,10 @@
                 <ul id="lista-uno-principal">
                     <li id="lista-uno"><a href="index.html">HOME</a></li>
                     <li id="lista-uno"><a href="nosotros.html">NOSOTROS</a></li>
-                    <li id="lista-uno"><a href="productos.html">PRODUCTOS</a>
+                    <li id="lista-uno" class="lista-desplegable"><a href="productos.html">PRODUCTOS</a>
                         <ul id="desplegable-menu">
                             <a href="" style="background-color: #ffa726;color: #fff;">CALEFACCIÓN</a>
-                            <a href="productos-ventilacion.css" style="background: #42a5f5;color:#fff">VENTILACIÓN</a>
+                            <a href="" style="background: #42a5f5;color:#fff">VENTILACIÓN</a>
                             <a href="productos-bazar.html" style="background: #ff3366;color: #fff;">BAZAR</a>
                             <a href="" style="background: #8ec351;color: #fff;">JARDÍN</a>
                             <a href="" style="background-color: #fff;color: #000;">CÁTALOGO DE PRODUCTOS</a>
@@ -47,21 +47,29 @@
             </nav>
             <div class="menu-redes">
                 <ul class="menu-iconos">
-                    <li><a href=""><i class="fa-brands fa-facebook icono"></i></a></li>
-                    <li><a href=""><i class="fa-brands fa-instagram icono"></i></a></li>
-                    <li><a href=""><i class="fa-brands fa-twitter icono"></i></a></li>
-                    <li><a href=""><i class="fa-brands fa-linkedin icono"></i></a></li>
-                    <li><a href=""><i class="fa-brands fa-youtube icono"></i></a></li>
+                    <li><a href="https://www.facebook.com/magiclickar" target="_blank"><i
+                                class="fa-brands fa-facebook icono"></i></a></li>
+                    <li><a href="https://www.instagram.com/magiclickar/" target="_blank"><i
+                                class="fa-brands fa-instagram icono"></i></a></li>
+                    <li><a href="https://twitter.com/Magiclickar" target="_blank"><i
+                                class="fa-brands fa-twitter icono"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/magiclick/" target="_blank"><i
+                                class="fa-brands fa-linkedin icono"></i></a></li>
+                    <li><a href="https://www.youtube.com/@MagiclickArgentina" target="_blank"><i
+                                class="fa-brands fa-youtube icono"></i></a></li>
                     <li><a href=""><i class="fa-solid fa-magnifying-glass icono"></i></a></li>
                 </ul>
             </div>
         </div>
     </header>
     <main>
-        <section class="productos">
-            <img src="imagenes/banner_cat_bazar_03.jpg" alt="">
-            <div class="text-somos">
-                <h2>BAZAR</h2>
+        <section>
+            <div class="quienes-somos">
+                <div class="video-overlay"></div>
+                <img src="imagenes/banner_cat_bazar_03.jpg" alt="">
+                <div class="text-somos">
+                    <h2 id="video-toggle">BAZAR</h2>
+                </div>
             </div>
         </section>
         <section id="buscar">
@@ -71,7 +79,7 @@
             </div>
             <div class="lista-producto">
                 <div class="objeto">
-                    <img src="imagenes/bidon4litros.jpg" alt="" data-target="modal1">
+                    <img src="imagenes/bidon4litros.jpg" alt="" class="img-modal">
                     <a href="" class="texto" data-target="modal1">BIDÓN 4LTS.</a>
                 </div>
                 <div id="modal1" class="modal">
@@ -80,13 +88,17 @@
                         <div class="contenedor">
                             <img class="img-produ" id="imagen-principal" src="imagenes/bidon4litros.jpg" alt="">
                             <div class="img-todas">
-                              <img src="imagenes/B1910_web_04.jpg" alt="" onclick="cambiarImagen('imagenes/B1910_web_04.jpg')">
-                              <img src="imagenes/B1910_web_05.jpg" alt="" onclick="cambiarImagen('imagenes/B1910_web_05.jpg')">
-                              <img src="imagenes/B1910_web_06.jpg" alt="" onclick="cambiarImagen('imagenes/B1910_web_06.jpg')">
-                              <img src="imagenes/bidon4litros.jpg" alt="" onclick="cambiarImagen('imagenes/bidon4litros.jpg')">
+                                <img src="imagenes/B1910_web_04.jpg" alt=""
+                                    onclick="cambiarImagen('imagenes/B1910_web_04.jpg')">
+                                <img src="imagenes/B1910_web_05.jpg" alt=""
+                                    onclick="cambiarImagen('imagenes/B1910_web_05.jpg')">
+                                <img src="imagenes/B1910_web_06.jpg" alt=""
+                                    onclick="cambiarImagen('imagenes/B1910_web_06.jpg')">
+                                <img src="imagenes/bidon4litros.jpg" alt=""
+                                    onclick="cambiarImagen('imagenes/bidon4litros.jpg')">
                             </div>
-                          </div>
-                          
+                        </div>
+
 
                         <div class="titulo">
                             <h2>BIDÓN 4 LTS.</h2>
@@ -104,7 +116,6 @@
                                 <img class="industria" src="imagenes/industria-argentina.png" alt="">
                                 <button><i class="fa-regular fa-file-pdf"> DESCARGAR CATÁLOGO</i></button>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -119,13 +130,17 @@
                         <div class="contenedor">
                             <img class="img-produ" id="imagen-principal" src="imagenes/bowl-todos.jpg" alt="">
                             <div class="img-todas">
-                              <img src="imagenes/bowl-todos.jpg" alt="" onclick="cambiarImagen('imagenes/bowl-todos.jpg')">
-                              <img src="imagenes/B1910_web_05.jpg" alt="" onclick="cambiarImagen('imagenes/B1910_web_05.jpg')">
-                              <img src="imagenes/B1910_web_06.jpg" alt="" onclick="cambiarImagen('imagenes/B1910_web_06.jpg')">
-                              <img src="imagenes/bidon4litros.jpg" alt="" onclick="cambiarImagen('imagenes/bidon4litros.jpg')">
+                                <img src="imagenes/bowl-todos.jpg" alt=""
+                                    onclick="cambiarImagen('imagenes/bowl-todos.jpg')">
+                                <img src="imagenes/B1910_web_05.jpg" alt=""
+                                    onclick="cambiarImagen('imagenes/B1910_web_05.jpg')">
+                                <img src="imagenes/B1910_web_06.jpg" alt=""
+                                    onclick="cambiarImagen('imagenes/B1910_web_06.jpg')">
+                                <img src="imagenes/bidon4litros.jpg" alt=""
+                                    onclick="cambiarImagen('imagenes/bidon4litros.jpg')">
                             </div>
-                          </div>
-                          
+                        </div>
+
 
                         <div class="titulo">
                             <h2>BOWL CHICO.</h2>
@@ -159,13 +174,17 @@
                         <div class="contenedor">
                             <img class="img-produ" id="imagen-principal" src="imagenes/bidon4litros.jpg" alt="">
                             <div class="img-todas">
-                              <img src="imagenes/B1910_web_04.jpg" alt="" onclick="cambiarImagen('imagenes/B1910_web_04.jpg')">
-                              <img src="imagenes/B1910_web_05.jpg" alt="" onclick="cambiarImagen('imagenes/B1910_web_05.jpg')">
-                              <img src="imagenes/B1910_web_06.jpg" alt="" onclick="cambiarImagen('imagenes/B1910_web_06.jpg')">
-                              <img src="imagenes/bidon4litros.jpg" alt="" onclick="cambiarImagen('imagenes/bidon4litros.jpg')">
+                                <img src="imagenes/B1910_web_04.jpg" alt=""
+                                    onclick="cambiarImagen('imagenes/B1910_web_04.jpg')">
+                                <img src="imagenes/B1910_web_05.jpg" alt=""
+                                    onclick="cambiarImagen('imagenes/B1910_web_05.jpg')">
+                                <img src="imagenes/B1910_web_06.jpg" alt=""
+                                    onclick="cambiarImagen('imagenes/B1910_web_06.jpg')">
+                                <img src="imagenes/bidon4litros.jpg" alt=""
+                                    onclick="cambiarImagen('imagenes/bidon4litros.jpg')">
                             </div>
-                          </div>
-                          
+                        </div>
+
 
                         <div class="titulo">
                             <h2>BIDÓN 4 LTS.</h2>
@@ -217,60 +236,60 @@
         </section>
         <section id="disfruta-hogar">
             <div class="comprar">
-              <h2>¡Disfrutá tu hogar!</h2>
-              <a href="">COMPRAR</a>
+                <h2>¡Disfrutá tu hogar!</h2>
+                <a href="">COMPRAR</a>
             </div>
             <div class="hogar-img">
-              <img class="imagen-final" src="imagenes/ventilacion-1.jpg" alt="" srcset="">
-              <img class="imagen-final" src="imagenes/DSC05015-scaled.jpg" alt="" srcset="">
-              <img class="imagen-final" src="imagenes/calefaccion.jpg" alt="" srcset="">
-              <img class="imagen-final" src="imagenes/DSC04328-1538x2048.jpeg" alt="" srcset="">
-              <img class="imagen-final" src="imagenes/DSC05232-scaled.jpg" alt="" srcset="">
-              <img class="imagen-final" src="imagenes/DSC05232-scaled.jpg" alt="" srcset="">
-              <img class="imagen-final" src="imagenes/DSC_1400-scaled.jpg" alt="" srcset="">
-              <img class="imagen-final" src="imagenes/empresa_galeria_01.jpg" alt="" srcset="">
+                <img class="imagen-final" src="imagenes/ventilacion-1.jpg" alt="" srcset="">
+                <img class="imagen-final" src="imagenes/DSC05015-scaled.jpg" alt="" srcset="">
+                <img class="imagen-final" src="imagenes/calefaccion.jpg" alt="" srcset="">
+                <img class="imagen-final" src="imagenes/DSC04328-1538x2048.jpeg" alt="" srcset="">
+                <img class="imagen-final" src="imagenes/DSC05232-scaled.jpg" alt="" srcset="">
+                <img class="imagen-final" src="imagenes/DSC05232-scaled.jpg" alt="" srcset="">
+                <img class="imagen-final" src="imagenes/DSC_1400-scaled.jpg" alt="" srcset="">
+                <img class="imagen-final" src="imagenes/empresa_galeria_01.jpg" alt="" srcset="">
             </div>
-          </section>
-            <section id="nav-dos">
-                <img src="imagenes/logo-default.png" alt="">
-                <div class="contenedor-nav-dos">
+        </section>
+        <section id="nav-dos">
+            <img src="imagenes/logo-default.png" alt="">
+            <div class="contenedor-nav-dos">
                 <nav>
                     <ul>
-                    <li><a href="index.html" class="a-nav-dos">HOME</a></li>
-                    <li><a href="nosotros.html" class="a-nav-dos">NOSOTROS</a></li>
-                    <li><a href="productos-ventilacion.html" class="a-nav-dos">VENTILACION</a></li>
-                    <li><a href="" class="a-nav-dos">CALEFACCION</a></li>
-                    <li><a href="productos-bazar.html" class="a-nav-dos">BAZAR</a></li>
-                    <li><a href="" class="a-nav-dos">JARDIN</a></li>
-                    <li><a href="servicio-tecnico.html" class="a-nav-dos">SERVICE</a></li>
-                    <li><a href="contacto.html" class="a-nav-dos">CONTACTO</a></li>
+                        <li><a href="index.html" class="a-nav-dos">HOME</a></li>
+                        <li><a href="nosotros.html" class="a-nav-dos">NOSOTROS</a></li>
+                        <li><a href="productos-ventilacion.html" class="a-nav-dos">VENTILACION</a></li>
+                        <li><a href="" class="a-nav-dos">CALEFACCION</a></li>
+                        <li><a href="productos-bazar.html" class="a-nav-dos">BAZAR</a></li>
+                        <li><a href="" class="a-nav-dos">JARDIN</a></li>
+                        <li><a href="servicio-tecnico.html" class="a-nav-dos">SERVICE</a></li>
+                        <li><a href="contacto.html" class="a-nav-dos">CONTACTO</a></li>
                     </ul>
                 </nav>
-                </div>
-            </section>
-            </main>
-            <footer>
-            <h2>¡No te pierdas nuestras novedades!</h2>
-            <p>¡Suscribite al Newsletter!</p>
-            <div class="btn-footer">
-                <input type="email" placeholder="Tu email">
-                <button class="btn-submit" type="submit">SUSCRIBITE</button>
             </div>
-            <div class="whatsapp">
-                <a href="https://api.whatsapp.com/send?phone=TUNUMERO" class="whatsapp-link">
+        </section>
+    </main>
+    <footer>
+        <h2>¡No te pierdas nuestras novedades!</h2>
+        <p>¡Suscribite al Newsletter!</p>
+        <div class="btn-footer">
+            <input type="email" placeholder="Tu email">
+            <button class="btn-submit" type="submit">SUSCRIBITE</button>
+        </div>
+        <div class="whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=TUNUMERO" class="whatsapp-link">
                 <img src="imagenes/descarga.png" alt="WhatsApp" class="whatsapp-logo">
-                </a>
-        
-            </div>
-            <div class="marca">
-                <h1>PRODUCIDO POR BRAIAN OCAMPO</h1>
-            </div>
-            </footer>
+            </a>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="productos-bazar.js"></script>
-    </body>
+        </div>
+        <div class="marca">
+            <h1>PRODUCIDO POR BRAIAN OCAMPO</h1>
+        </div>
+    </footer>
 
-    </html>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="productos-bazar.js"></script>
+</body>
+
+</html>
