@@ -45,3 +45,15 @@ $(document).ready(function() {
       $('nav').slideToggle();
     });
   }
+  /* funcion para que cambie de color cuando pasa el muose por encima */
+  const enlaces = document.querySelectorAll('.a-nav-dos');
+
+  enlaces.forEach((enlace) => {
+    enlace.addEventListener('mouseover', () => {
+      enlace.style.color = '#FFA726'; /* Cambia el color al pasar el mouse por encima */
+    });
+  
+    enlace.addEventListener('mouseout', () => {
+      enlace.style.color = '#000000'; /* Restablece el color al quitar el mouse */
+    });
+  });  

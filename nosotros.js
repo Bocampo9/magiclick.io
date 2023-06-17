@@ -30,7 +30,7 @@ function initSlickSlider() {
 }
 
 function initMap() {
-  const myLatLng = {lat: -34.66643065254622, lng: -58.52743963000827};
+  const myLatLng = {lat: -34.6664, lng: -58.5274};
 
   const mapOptions = {
     zoom: 15,

@@ -1,107 +1,116 @@
 body {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 .menu-icon-oculto {
- display: none;
+display: none;
 }
 .buscar {
-  display: none;
-  color: #939AA9;
-  text-decoration: none;
-  font-size: 18px;
-}
-.menu-imagen {
-    display: flex;
-    justify-content: center;
-    height: 80px;
-    padding: 30px;
-    margin-bottom: 20px;
+display: none;
+color: #939AA9;
+text-decoration: none;
+font-size: 18px;
 }
 .menu-magiclick {
-  height: 60px;
+height: 60px;
 }
-.contenedor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.menu-fijo {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 80px;
+position: fixed;
+z-index: 999;
+width: 100%;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.menu-fijo .contenedor {
+display: flex;
+align-items: center;
+padding-top: 14px;
 }
 
 .contenedor ul {
-    display: flex;
-    justify-content: center;
-/*     border: 1px solid #000; */
+  display: flex;
+  justify-content: center;
 }
 .contenedor li {
-    list-style: none;
-    letter-spacing: 1px;
-    padding: 0px 10px;
+  list-style: none;
+  letter-spacing: 1px;
+  padding: 0px 10px;
 }
 #lista-uno:hover {
-  top: 20px;
-  background: #feb142;
+top: 20px;
+background: #feb142;
 }
 .contenedor nav{
-  position: relative;
+position: relative;
 }
 #desplegable-menu{
-  display: none;
-  position: absolute;
-  left: 162px;
+display: none;
+position: absolute;
+left: 153px;
+
 }
 #desplegable-menu a {
-  padding: 15px 20px;
-  font-size: 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+padding: 15px 20px;
+font-size: 10px;
+text-align: center;
+display: flex;
+flex-direction: column;
+transition: filter 0.3s ease-in-out;
+}
+#desplegable-menu a:hover {
+filter: brightness(115%);
 }
 
 #lista-uno-principal li:nth-child(3):hover #desplegable-menu {
-  display: block;
-  z-index: 100;
+display: block;
+z-index: 100;
 }
 
 .contenedor a {
-    font-family: 'Raleway';
-    color: #000;
-    text-decoration: none;
-    font-size: 12px;
+  font-family: 'Raleway';
+  color: #000;
+  text-decoration: none;
+  font-size: 12px;
 }
 .menu-redes ul {
-    padding-left: 2px;
+  padding-left: 2px;
 }
 .menu-redes a {
-    color: rgb(186, 186, 186);
-    font-size: 23px;
+  color: rgb(186, 186, 186);
+  font-size: 23px;
 }
 .icono:hover {
-  transform: scale(1.2);
+transform: scale(1.2);
+}
+/* Quienes somos */
+.quienes-somos {
+  position: relative;
 }
 
-/* productos */
-  .productos {
-    position: relative;
-
-}
-.productos img {
+.quienes-somos img {
   width: 100%;
-  height: 500px;
+  height: 600px;
+  background-size: contain;
+  filter: brightness(40%); /* Ajusta el valor de brightness según lo oscuro que quieras que sea el video */
 }
+
 .text-somos {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-}
-.text-somos h2{
-    margin: auto;
-    color: #fff;
-    font-weight: 900;
-    font-size: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Asegura que el encabezado esté por encima del video */
 }
 
+.text-somos h2 {
+  margin: auto;
+  color: #fff;
+  font-weight: 900;
+  font-size: 70px;
+}
 /* section mapa */
 #mapa-servicio {
     display: flex;
@@ -228,55 +237,77 @@ font-size: 13px;
 }
 @media screen and (max-width: 800px){
 
-  /* responsive nav */
-
-  /* responsive nav */
-
-  .menu-imagen {
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 10px;
-    padding-top: 22px;
+ /* responsive nav */
+ .menu-fijo {
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  box-shadow:none;
 }
-  .menu-icon-oculto {
-    display: block;
-    margin-right: 23px;
-    margin-top: 15px;
+.menu-fijo .contenedor {
+padding-top: 0px;
+}
+.menu-imagen {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 10px;
+}
+.menu-magiclick {
+font-size: 10px;
+}
+.menu-icon-oculto {
+display: block;
+margin-top: 15px;
 }
 .buscar {
-  display: block;
+display: block;
 }
 
 .contenedor {
-  justify-content: start;
-  margin-left: -9px;
-
-  
+justify-content: start;
+margin-left: -9px;
+padding-top: 0px;
+}
+.contenedor nav {
+position: relative;
+width: 95%;
 }
 .contenedor ul {
-  flex-direction: column;
-  
+flex-direction: column;
+
 }
 .contenedor li {
-  text-underline-position: under;
-  text-decoration: underline 2px #939AA9;
-  width: 100%;
+padding: 0;
+border-bottom: 1px solid #a7a8aa;
 }
 .contenedor a {
-  font-size: 11px;
-  letter-spacing: 2px;
+font-size: 11px;
+letter-spacing: 2px;
 }
 #lista-uno-principal:hover li {
-  color: #feb142;
+color: #feb142;
+}
+nav {
+display: none;
 }
 .menu-redes {
-  display: none;
+display: none;
 }
-.productos img {
-  height: 200px;
+
+/* quienes somos */
+
+.quienes-somos img {
+width: 100%;
+height: 250px;
 }
 .text-somos h2 {
-  font-size: 33px;
+text-align: center;
+font-size: 33px;
 }
 #mapa-servicio h3 {
   font-size: 13px;
@@ -293,31 +324,31 @@ font-size: 13px;
 }
 #nav-dos {
   display: none;
-}
+  }
 footer {
-  margin-top: 30px;
+  padding-top: 15px;
 }
 footer h2 {
-  font-size: 25px;
+  font-size: 21px;
   font-weight: 300;
 }
 footer p {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 300;
 }
-
+.btn-footer {
+  padding-bottom: 14px;
+}
 footer button {
-  height: 39px;
-  margin-left: 2px;
-  padding: 0 50px 0 45px;
+  height: 31px;
+  margin-left: 0px;
+  padding: 0 45px 0 45px;
 }
 footer input {
   width: 66%;
-  height: 47px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 11px;
-  margin-bottom: 10px;
+  height: 40px;
+  padding-top: 13px;
+  padding-bottom: 13px;
 }
 
 .marca h1 {
