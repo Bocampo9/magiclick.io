@@ -99,7 +99,7 @@ section#carousel-inicio {
   background-repeat: no repeat;
 }
 .contenedor-disfruta {
-  justify-content: center;
+  justify-content: space-evenly;
   display: flex;
 }
 .disfruta-texto{
@@ -119,7 +119,7 @@ section#carousel-inicio {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
-    max-width: 1280px;
+    max-width: 80%;
     margin: 0 auto;
     padding-top: 50px;
 }
@@ -174,7 +174,7 @@ section#carousel-inicio {
   border-radius: 15px;
 }
  .carousel-dos {
-    width: 90%;
+    width: 80%;
     display: flex !important;
     margin: 0 auto;
  }
@@ -201,67 +201,12 @@ section#carousel-inicio {
   .carousel-img h3{
     font-size: 20px;
     text-align: center;
-    padding-top: 10px;
     font-family: 'Raleway';
     font-weight: 300;
     letter-spacing: 1px;
+    position: relative;
+    z-index: 10;
   }
-
-  /* productos */
-  #productos {
-    height: 500px;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    background-image: url(imagenes/banner_home_sec_01.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-#productos::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0.8; /* Ajusta el valor de opacidad según tu preferencia */
-    z-index: 1;
-}
-
-.contenedor-productos {
-    position: relative;
-    z-index: 2;
-}
-
-.contenedor-productos h1 {
-    font-size: 68px;
-    font-family: 'Raleway';
-    font-weight: 900;
-    color: #fff;
-}
-
-.contenedor-productos a {
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-    padding: 9px;
-    border-radius: 10px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    margin: 0 3px;
-}
-.botones a:hover{
-  filter: brightness(115%);
-}
-
-
 /* seccion servicio */
 
 #card-servicios {
@@ -269,10 +214,10 @@ section#carousel-inicio {
   padding: 50px 0;
 }
 .contenedor-servicio {
-   height: 425px; 
-   display: flex;
-   width: 90%;
-   margin-left: 70px;
+  height: 425px;
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
 }
 .contenedor-servicio .servicios{
     width: 100%;
@@ -316,10 +261,10 @@ section#carousel-inicio {
 /* novedad */
 #novedad {
   overflow: hidden;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  margin: 70px 70px;
-  border-radius: 15px;
+  margin-top: 200px;
+  margin-bottom: 200px;
 }
 .contenedor-novedad {
     position: relative;
@@ -334,7 +279,6 @@ section#carousel-inicio {
     justify-content: center;
     align-items: center;
     transition: transform 0.4s;
-    border-radius: 15px;
 }
 .contenedor-novedad:hover {
   transform: scale(1.1);
@@ -365,8 +309,8 @@ section#carousel-inicio {
 
   /* magiclick */
   #magiclick {
-    width: 90%;
-    margin-left: 70px;
+    width: 80%;
+    margin: 0 auto;
     align-content: center;
     margin-bottom: 100px;
     height: 438px;
@@ -385,12 +329,13 @@ section#carousel-inicio {
     font-family: 'Raleway';
     font-size: 32px;
     font-weight: 300;
+    text-align: center;
   }
   .izquierda p{
     font-family: 'Raleway';
-    font-size: 18px;
+    font-size: 13px;
     color: #73606a;
-    padding: 5px 80px;
+    padding: 0px 80px;
     text-align: center;
     letter-spacing: 1px;
   }
@@ -406,36 +351,149 @@ section#carousel-inicio {
   .izquierda a:hover {
     color: #363636;
   }
-
-  /* carousel-nosotros */
-
-  #carousel-nosotros {
-    width: 100%;
+/* carousel-nuevo */
+  @keyframes heartbeat {
+    0% {
+      transform: scale(0);
+    }
+    25% {
+      transform: scale(1.2);
+    }
+    50% {
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .slider-container {
+    position: relative;
     margin: 0 auto;
-    padding-bottom: 120px;  
+    width: 80%;
+    height: 700px;
   }
-  .multiple-items {
-    display: flex !important;
-  }
-  .multiple-items img {
-    height: 350px;
+  .slider-container .bullet-container {
+    position: absolute;
+    bottom: 10px;
     width: 100%;
-    margin: auto;
-}
-#carousel-nosotros .slick-prev,#carousel-nosotros .slick-next {
-    padding: 0 20px;
-    font-size: 40px;
-    background: none;
-    border: none;
-    color: darkgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slider-container .bullet-container .bullet {
+    margin-right: 14px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.5;
+  }
+  .slider-container .bullet-container .bullet:last-child {
+    margin-right: 0px;
+  }
+  .slider-container .bullet-container .bullet.active {
+    opacity: 1;
+  }
+  .slider-container .slider-content {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 70%;
+    height: 70%;
+    transform: translate(-50%, -50%);
+  }
+  .slider-container .slider-content .slider-single {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: z-index 0ms 250ms;
+  }
+  .slider-container .slider-content .slider-single .slider-single-image {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+    transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
+    transform: scale(0);
+    opacity: 0;
+  }
+  .slider-container .slider-content .slider-single .slider-single-download:hover, .slider-container .slider-content .slider-single .slider-single-download:focus {
+    outline: none;
+    text-decoration: none;
   }
 
-  /* disfruta hogar */
-
+  .slider-container .slider-content .slider-single.preactivede .slider-single-image {
+    transform: translateX(-50%) scale(0);
+  }
+  .slider-container .slider-content .slider-single.preactive {
+    z-index: 1;
+  }
+  .slider-container .slider-content .slider-single.preactive .slider-single-image {
+    opacity: 0.3;
+    transform: translateX(-25%) scale(0.8);
+  }
+  .slider-container .slider-content .slider-single.proactive {
+    z-index: 1;
+  }
+  .slider-container .slider-content .slider-single.proactive .slider-single-image {
+    opacity: 0.3;
+    transform: translateX(25%) scale(0.8);
+  }
+  .slider-container .slider-content .slider-single.proactivede .slider-single-image {
+    transform: translateX(50%) scale(0);
+  }
+  .slider-container .slider-content .slider-single.active {
+    z-index: 2;
+  }
+  .slider-container .slider-content .slider-single.active .slider-single-image {
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+  }
+  .slider-container .slider-left {
+    position: absolute;
+    z-index: 3;
+    display: block;
+    right: 85%;
+    top: 50%;
+    color: #ffffff;
+    transform: translateY(-50%);
+    padding: 20px 15px;
+    border-top: 2px solid #feb142;
+    border-right: 2px solid #feb142;
+    border-bottom: 2px solid #feb142;
+    border-left: 2px solid #feb142;
+    margin-right: -2px;
+  }
+  .slider-container .slider-right {
+    position: absolute;
+    z-index: 3;
+    display: block;
+    left: 85%;
+    top: 50%;
+    color: #ffffff;
+    transform: translateY(-50%);
+    padding: 20px 15px;
+    border-top: 2px solid #feb142;
+    border-right: 2px solid #feb142;
+    border-bottom: 2px solid #feb142;
+    border-left: 2px solid #feb142;
+    margin-left: -2px;
+  }
+  .slider-container .not-visible {
+    display: none !important;
+  }
 #disfruta-hogar {
-    height: 327px;
+    height: auto;
     width: 100%;
-    background: #e5efda;
 }
   #disfruta-hogar .comprar {
     display: flex;
@@ -459,22 +517,6 @@ section#carousel-inicio {
     margin-right: 60px;
     font-size: 12px;
     border-radius: 15px;
-  }
-  .hogar-img {
-    display: flex;
-    overflow: hidden;
-    
-  }
-  .imagen-final {
-    width: 100%;
-    height: 180px;
-    background-size: cover;
-    transition: transform 0.3s ease;
-
-  }
-  .imagen-final:hover {
-    transform: scale(1.1); /* Escala de 1.1 para expandir el fondo de la imagen */
-    
   }
   #nav-dos {
     display: flex;
@@ -653,6 +695,11 @@ section#carousel-inicio {
 .carousel-item.active {
   height: 165px !important;
 }
+
+.lista-desplegable:hover #desplegable-menu {
+  display: block;
+}
+
  /* responsive disfruta */
 
   #disfruta {
@@ -695,10 +742,10 @@ display: none;
 /* servicios */
 
 .contenedor-servicio {
-  width: 82%;
-  margin-left: 31px;
+  width: 80%;
+  margin: 0 auto;
   flex-direction: column;
-  height: 1000px;
+  height: auto;
 }
 .contenedor-servicio .servicios {
   height: 250px;
@@ -709,34 +756,39 @@ display: none;
 
 /* novedades */
 #novedad {
-  width: 82%;
-  margin: 20px 31px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.contenedor-novedad {
+  height: auto;
+  background-size: contain;
 }
 .contenedor-novedad h1 {
-  font-size: 51px;
+  font-size: 28px;
 }
 .contenedor-novedad p {
-  font-size: 17px;
+  font-size: 13px;
 }
 .contenedor-novedad a {
-  font-size: 19px;
+  font-size: 14px;
 }
-/* nosotros */
-#carousel-nosotros {
-  padding-bottom: 14px;
+.slider-container {
+  width: 80%;
+  height: 300px;
 }
-.multiple-items img {
-  height: 250px;
+.slider-container .slider-right, .slider-container .slider-left {
+padding: 10px 4px;
 }
+
 .contenedor-magiclick {
   display: flex;
   flex-direction: column;
 }
 #magiclick {
-  margin-bottom: 68px;
-  margin-left: 19px;
+  width: 80%;
+  margin: 0px auto;
   align-content: center;
-  height: 644px;
+  height: auto;
 }
 .izquierda h1 {
   margin-top: 9px;
@@ -749,8 +801,8 @@ display: none;
 }
 iframe {
   height: 250px;
-  width: 90%;
-  margin-left: 7px;
+  width: 100%;
+
 }
 /* Responsive disfruta hogar y nav 2 */
 

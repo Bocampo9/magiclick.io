@@ -120,7 +120,7 @@ transform: scale(1.2);
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px;
     grid-column: 40px;
-    max-width: 1280px;
+    max-width: 80%;
     margin: 0 auto;
     padding-top: 50px;
 
@@ -161,9 +161,11 @@ transform: scale(1.2);
 }
 /* carousel-dos */
  .carousel-dos {
-    width: 90%;
+    width: 80%;
     display: flex !important;
     margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 200px;
  }
  .carousel-img {
     width: 20%; /* 25% width for each item */
@@ -173,6 +175,10 @@ transform: scale(1.2);
   .carousel-img img {
     width: 100%;
     height: auto;
+    transition: transform 0.5s ease;
+  }
+  .carousel-img:hover img {
+    transform: scale(1.05);
   }
 
   .slick-prev, .slick-next {
