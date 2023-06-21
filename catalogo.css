@@ -329,7 +329,13 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(247,235,213,1) 
     text-align: center;
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(247,235,213,1) 100%);
-
+}
+.desca-pdf .pdf{
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px 10px;
+    background-color: #feb142;
+    color: #fff;
 }
 
 #nav-dos {
@@ -437,4 +443,176 @@ border-radius: 15px;
 }
 .marca h1{
   font-size: 30px;
+}
+@media screen and (max-width: 800px){
+
+  /* responsive nav */
+  .menu-fijo {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    position: relative;
+    z-index: 999;
+    width: 100%;
+    box-shadow:none;
+}
+.menu-fijo .contenedor {
+  padding-top: 0px;
+}
+.menu-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.menu-magiclick {
+  font-size: 10px;
+}
+.menu-icon-oculto {
+  display: block;
+  margin-top: 15px;
+}
+.buscar {
+  display: block;
+}
+
+.contenedor {
+  justify-content: start;
+  margin-left: -9px;
+  padding-top: 0px;
+}
+.contenedor nav {
+  position: relative;
+  width: 95%;
+}
+.contenedor ul {
+  flex-direction: column;
+  
+}
+.contenedor li {
+  padding: 0;
+  border-bottom: 1px solid #a7a8aa;
+}
+.contenedor a {
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+#lista-uno-principal:hover li {
+  color: #feb142;
+}
+nav {
+  display: none;
+}
+.menu-redes {
+  display: none;
+}
+
+.lista-desplegable:hover #desplegable-menu {
+  display: block;
+}
+
+
+  .catalogo-titulo {
+    padding-top: 13px;
+}
+.catalogo-titulo h2 {
+  font-size: 21px;
+}
+#toggleContainer {
+  width: 100%;
+  justify-content: center;
+  z-index: 10;
+}
+#toggle {
+  width: 131px;
+  margin: 46px;
+}
+.tileItem {
+  width: 150px;
+  height: 120px;
+  margin: 0px;
+}
+
+#mainView {
+  height: 250px;
+  width: 250px;
+}
+#galleryView {
+  height: 400px;
+}
+#navLeft {
+  left: 0%;
+}
+#navRight {
+  right: 0%;
+}
+.fa-3x {
+  font-size: 2em;
+}
+#outer3 {
+  width: 80px;
+  height: 20px;
+}
+#slider3 {
+  height: 16px;
+  width: 40px;
+}
+#slider3.active {
+  transform: translateX(33px);
+
+}
+#toggleContainer label {
+  width: 25px;
+  font-size: 14px;
+}
+.desca-pdf {
+  padding: 0;
+  margin-bottom: 15px;
+}
+.desca-pdf .pdf {
+  width: 43%;
+  margin: 0 auto;
+  padding: 8px 0px;
+  font-size: 12px;
+}
+  #nav-dos {
+    display: none;
+  }
+
+  footer {
+    padding-top: 15px;
+  }
+
+  footer h2 {
+    font-size: 21px;
+    font-weight: 300;
+  }
+
+  footer p {
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  .btn-footer {
+    padding-bottom: 14px;
+  }
+
+  footer button {
+    height: 31px;
+    margin-left: 0px;
+    padding: 0 45px 0 45px;
+  }
+
+  footer input {
+    width: 66%;
+    height: 40px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  .marca h1 {
+    font-size: 12px;
+    padding-top: 5px;
+  }
 }
