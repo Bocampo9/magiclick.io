@@ -389,10 +389,13 @@ nav {
     font-size: 12px;
     padding: 10px 17px;
 }
+.carousel-dos {
+  width: 80%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 
-  .carousel-dos {
-    width: 90%;
-  }
+
   #nav-dos {
     display: none;
     }
