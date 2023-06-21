@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  initSlickSlider();
   initMap();
   initMenuToggle();
   initLinkHover();
@@ -7,7 +6,7 @@ $(document).ready(function() {
 
 
 function initMap() {
-  const myLatLng = {lat: -34.66643065254622, lng: -58.52743963000827};
+  const myLatLng = {lat: -34.632, lng: -58.408};
 
   const mapOptions = {
     zoom: 15,
