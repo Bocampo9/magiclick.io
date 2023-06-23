@@ -447,16 +447,23 @@ padding-bottom: 50px;
 }
 
 .whatsapp-link {
-position: fixed;
-bottom: 20px;
-right: 20px;
-z-index: 999;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: rgb(45, 183, 66);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
-
 .whatsapp-logo {
-width: 56px;
-height: 56px;
-border-radius: 50%;
+font-size: 35px;
+align-items: center;
 }
 .marca {
   color: #ffffff;
@@ -474,76 +481,77 @@ font-size: 30px;
   /* responsive nav */
   .menu-fijo {
     display: inline;
-    justify-content: center;
-    align-items: center;
-    height: auto;
     position: relative;
     z-index: 999;
-    width: 100%;
-    box-shadow: none;
-  }
+    box-shadow:none;
+}
+.menu-fijo .contenedor {
+  padding-top: 0px;
+}
+.menu-imagen {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 11px;
+}
+.menu-magiclick {
+  font-size: 10px;
+}
+.menu-icon-oculto {
+  display: block;
+  margin-top: 15px;
+  font-size: 21px;
+}
+.buscar {
+  display: block;
+}
 
-  .menu-fijo .contenedor {
-    padding-top: 0px;
-  }
-
-  .menu-imagen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-  }
-
-  .menu-magiclick {
-    font-size: 10px;
-  }
-
-  .menu-icon-oculto {
-    display: block;
-    margin-top: 15px;
-  }
-
-  .buscar {
-    display: block;
-  }
-
-  .contenedor {
-    justify-content: start;
-    margin-left: -9px;
-    padding-top: 0px;
-  }
-
-  .contenedor nav {
-    position: relative;
-    width: 95%;
-  }
-
-  .contenedor ul {
-    flex-direction: column;
-
-  }
-
-  .contenedor li {
+.contenedor {
+  justify-content: start;
+  margin-left: -9px;
+  padding-top: 0px;
+}
+.contenedor nav {
+  position: relative;
+  width: 95%;
+}
+.contenedor ul {
+  flex-direction: column;
+  
+}
+.contenedor li {
     padding: 0;
-    border-bottom: 1px solid #a7a8aa;
-  }
+    border-bottom: 1px solid #888;
+}
+.contenedor a {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #888;
+  line-height: 25px;
+}
+.contenedor li:hover a {
+  color: #feb142;
+}
+#lista-uno:hover {
+  background: none;
+}
 
-  .contenedor a {
-    font-size: 11px;
-    letter-spacing: 2px;
-  }
-
-  #lista-uno-principal:hover li {
-    color: #feb142;
-  }
-
-  nav {
-    display: none;
-  }
-
-  .menu-redes {
-    display: none;
-  }
+nav {
+  display: none;
+}
+.menu-redes {
+  display: none;
+}
+.lista-desplegable:hover #desplegable-menu {
+  display: block;
+}
+#desplegable-menu {
+  left: 59%;
+}
+#desplegable-menu a {
+  padding: 2px 7px;
+  font-size: 8px;
+}
 
   /* quienes somos */
 
@@ -570,13 +578,14 @@ font-size: 30px;
     color: #939AA9;
     font-size: 14px;
     font-family: 'Raleway';
-    width: 90%;
+    width: 70%;
     padding: 0px;
     margin: 14px 0px;
   }
 
   .historia iframe {
     height: 250px;
+    width: 70%;
   }
 
   .contenedor img {
@@ -586,6 +595,12 @@ font-size: 30px;
   #certificaciones h3 {
     font-size: 13px;
     margin: 0px;
+  }
+  #certificaciones {
+    margin: 40px 0 0 0;
+  }
+  #certificaciones .contenedor {
+    width: 70%;
   }
 
   #certificaciones p {

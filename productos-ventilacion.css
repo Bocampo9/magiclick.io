@@ -160,34 +160,32 @@ transform: scale(1.2);
     
 }
 .objeto {
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 6px 0px 7px 0px rgba(66,165,245,0.4);
+}
+.objeto h2 {
+  font-family: 'Raleway';
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 300;
 }
 
-.objeto .texto {
-    position: absolute;
-    top: 84%;
-    left: 6%;
-    text-decoration: none;
-    color: #363636;
-    font-family: 'Raleway';
-    font-size: 20px;
-    letter-spacing: 1px;
-}
-.objeto:hover .texto {
+.objeto:hover {
   color: #42A5F5;
+  filter: brightness(80%);
 }
 .objeto img{
     width: 100%;
     border-radius: 15px;
     height: 300px;
     transition: filter 0.5s;
-    box-shadow: 6px 0px 7px 0px rgba(66,165,245,0.4);
-}
-.objeto:hover img {
-  filter: brightness(80%);
+
 }
 /* modal */
-#modal2 {
+.modal {
   width: 50%;
   left: 25%;
   height: auto;
@@ -196,20 +194,26 @@ transform: scale(1.2);
   border-radius: 20px;
   top: 6%;
 }
-#modal2 .img-produ {
+
+.modal .modal-content {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.modal .img-produ {
   width: 50%;
   height: 400px;
   border-radius: 20px;
 }
-#modal2 .contenedor {
+.modal .contenedor {
 display: flex;
 justify-content: center;
 align-items: center;
 }
-#modal2 .contenedor img {
+.modal .contenedor img {
   transition: transform 0.3s ease;
 }
-#modal2 .contenedor img:hover {
+.modal .contenedor img:hover {
   transform: scale(1.2);
 }
 .img-todas {
@@ -300,49 +304,105 @@ align-items: center;
  /* disfruta hogar */
 
  #disfruta-hogar {
-    height: 327px;
-    width: 100%;
-    background: #e5efda;
+  height: auto;
+  width: 100%;
 }
-  #disfruta-hogar .comprar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 40px 40px 10px;
+#disfruta-hogar .comprar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 40px 40px 10px;
+}
+#disfruta-hogar h2{
+  font-size: 32px;
+  font-weight: 300;
+  font-family: 'Raleway';
+  margin-left: 60px;
 
-  }
-  #disfruta-hogar h2{
-    font-size: 32px;
-    font-weight: 300;
-    font-family: 'Raleway';
-    margin-left: 60px;
+}
+#disfruta-hogar a{
+  text-decoration: none;
+  padding: 20px 40px;
+  color: #fff;
+  background: #feb142;
+  height: 100%;
+  margin-right: 60px;
+  font-size: 12px;
+  border-radius: 15px;
+}
 
-  }
-  #disfruta-hogar a{
-    text-decoration: none;
-    padding: 20px 40px;
-    color: #fff;
-    background: #feb142;
-    height: 100%;
-    margin-right: 60px;
-    font-size: 12px;
-  }
-  .hogar-img {
-    display: flex;
-    overflow: hidden;
-    
-  }
-  .imagen-final {
-    width: 100%;
-    height: 180px;
-    background-size: cover;
-    transition: transform 0.3s ease;
 
+:root {
+  --marquee-width: 100%;
+  --marquee-height: 80px;
+  /* --marquee-elements: 12; */ /* defined with JavaScript */
+  --marquee-elements-displayed: 11;
+  --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+  --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+}
+
+.marquee {
+  width: var(--marquee-width);
+  height: var(--marquee-height);
+  color: #eee;
+  overflow: hidden;
+  position: relative;
+}
+.marquee:before, .marquee:after {
+  position: absolute;
+  top: 0;
+  width: 10rem;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+.marquee:before {
+  left: 0;
+  background: linear-gradient(to right, #f7ebd5 0%, transparent 15%);
+}
+.marquee:after {
+  right: 0;
+  background: linear-gradient(to left, #f7ebd5 0%, transparent 15%);
+}
+.marquee-content {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  animation: scrolling var(--marquee-animation-duration) linear infinite;
+}
+/* .marquee-content:hover {
+  animation-play-state: paused;
+} */
+@keyframes scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+}
+.marquee-content li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  flex-shrink: 0;
+  width: var(--marquee-element-width);
+  max-height: 90%;
+  font-size: calc(var(--marquee-height)*3/4); /* 5rem; */
+  white-space: nowrap;
+}
+
+.marquee-content li img {
+  width: auto;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  html { font-size: 12px; }
+  :root {
+    --marquee-width: 100vw;
+    --marquee-height: 16vh;
+    --marquee-elements-displayed: 3;
   }
-  .imagen-final:hover {
-    transform: scale(1.1); /* Escala de 1.1 para expandir el fondo de la imagen */
-    
-  }
+  .marquee:before, .marquee:after { width: 5rem; }
+}
   /* nav-dos */
   #nav-dos {
     display: flex;
@@ -430,12 +490,19 @@ font-size: 13px;
   bottom: 20px;
   right: 20px;
   z-index: 999;
-}
-
-.whatsapp-logo {
-  width: 56px;
-  height: 56px;
+  background-color: rgb(45, 183, 66);
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.whatsapp-logo {
+font-size: 35px;
+align-items: center;
 }
 .marca {
     color: #ffffff;
@@ -452,12 +519,8 @@ font-size: 13px;
   /* responsive nav */
   .menu-fijo {
     display: inline;
-    justify-content: center;
-    align-items: center;
-    height: auto;
     position: relative;
     z-index: 999;
-    width: 100%;
     box-shadow:none;
 }
 .menu-fijo .contenedor {
@@ -465,9 +528,9 @@ font-size: 13px;
 }
 .menu-imagen {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 11px;
 }
 .menu-magiclick {
   font-size: 10px;
@@ -475,6 +538,7 @@ font-size: 13px;
 .menu-icon-oculto {
   display: block;
   margin-top: 15px;
+  font-size: 21px;
 }
 .buscar {
   display: block;
@@ -494,22 +558,39 @@ font-size: 13px;
   
 }
 .contenedor li {
-  padding: 0;
-  border-bottom: 1px solid #a7a8aa;
+    padding: 0;
+    border-bottom: 1px solid #888;
 }
 .contenedor a {
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 2px;
+  color: #888;
+  line-height: 25px;
 }
-#lista-uno-principal:hover li {
+.contenedor li:hover a {
   color: #feb142;
 }
+#lista-uno:hover {
+  background: none;
+}
+
 nav {
   display: none;
 }
 .menu-redes {
   display: none;
 }
+.lista-desplegable:hover #desplegable-menu {
+  display: block;
+}
+#desplegable-menu {
+  left: 59%;
+}
+#desplegable-menu a {
+  padding: 2px 7px;
+  font-size: 8px;
+}
+
 
 /* quienes somos */
 

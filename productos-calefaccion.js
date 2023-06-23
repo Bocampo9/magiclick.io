@@ -6,35 +6,48 @@ $(document).ready(function(){
 
   
 // Obtener el botón de cierre del modal
-var closeButton = document.querySelector('.close');
+var closeButtons = document.querySelectorAll('.close');
 
 // Obtener las imágenes y los enlaces
-var imageModal = document.querySelector('.img-modal');
-var linkModal = document.querySelector('.objeto a[data-target]');
+var imageModals = document.querySelectorAll('.img-modal');
+var linkModals = document.querySelectorAll('.objeto a[data-target]');
 
-// Función para abrir el modal
-function openModal(event) {
+// Función para abrir el modal con información específica
+function openModal(event, objeto) {
   event.preventDefault();
-  var target = this.getAttribute('data-target');
+  var target = objeto.getAttribute('data-target');
   var modal = document.getElementById(target);
   modal.style.display = "block";
 }
 
-// Agregar evento de clic a la imagen y al enlace
-imageModal.addEventListener('click', openModal);
-linkModal.addEventListener('click', openModal);
-
-// Agregar evento de clic al botón de cierre para cerrar el modal
-closeButton.addEventListener('click', function () {
-  var modal = this.closest('.modal');
-  modal.style.display = "none";
+// Agregar evento de clic a cada imagen y enlace
+imageModals.forEach(function(imageModal) {
+  imageModal.addEventListener('click', function(event) {
+    openModal(event, imageModal);
+  });
 });
 
+linkModals.forEach(function(linkModal) {
+  linkModal.addEventListener('click', function(event) {
+    openModal(event, linkModal);
+  });
+});
+
+// Agregar evento de clic a cada botón de cierre para cerrar el modal correspondiente
+closeButtons.forEach(function(closeButton) {
+  closeButton.addEventListener('click', function() {
+    var modal = this.closest('.modal');
+    modal.style.display = "none";
+  });
+});
 
 function cambiarImagen(urlImagen) {
-    var imagenPrincipal = document.getElementById('imagen-principal');
-    imagenPrincipal.src = urlImagen;
-  }
+  var imagenPrincipal = document.getElementById('imagen-principal');
+  imagenPrincipal.src = urlImagen;
+}
+
+
+
   /* funcion para que cambie de color cuando pasa el muose por encima */
   const enlaces = document.querySelectorAll('.a-nav-dos');
 
@@ -47,3 +60,15 @@ function cambiarImagen(urlImagen) {
       enlace.style.color = '#000000'; /* Restablece el color al quitar el mouse */
     });
   });  
+
+  /* funcion para que los iconos se muevas constantemente */
+
+const root = document.documentElement;
+const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+const marqueeContent = document.querySelector("ul.marquee-content");
+
+root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+for(let i=0; i<marqueeElementsDisplayed; i++) {
+  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+}

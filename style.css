@@ -518,6 +518,81 @@ section#carousel-inicio {
     font-size: 12px;
     border-radius: 15px;
   }
+
+
+  :root {
+    --marquee-width: 100%;
+    --marquee-height: 80px;
+    /* --marquee-elements: 12; */ /* defined with JavaScript */
+    --marquee-elements-displayed: 11;
+    --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+  }
+  
+  .marquee {
+    width: var(--marquee-width);
+    height: var(--marquee-height);
+    color: #eee;
+    overflow: hidden;
+    position: relative;
+  }
+  .marquee:before, .marquee:after {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+  }
+  .marquee:before {
+    left: 0;
+    background: linear-gradient(to right, #f7ebd5 0%, transparent 15%);
+  }
+  .marquee:after {
+    right: 0;
+    background: linear-gradient(to left, #f7ebd5 0%, transparent 15%);
+  }
+  .marquee-content {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
+  }
+  /* .marquee-content:hover {
+    animation-play-state: paused;
+  } */
+  @keyframes scrolling {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+  }
+  .marquee-content li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    flex-shrink: 0;
+    width: var(--marquee-element-width);
+    max-height: 90%;
+    font-size: calc(var(--marquee-height)*3/4); /* 5rem; */
+    white-space: nowrap;
+  }
+  
+  .marquee-content li img {
+    width: auto;
+    height: auto;
+  }
+  
+  @media (max-width: 600px) {
+    html { font-size: 12px; }
+    :root {
+      --marquee-width: 100vw;
+      --marquee-height: 16vh;
+      --marquee-elements-displayed: 3;
+    }
+    .marquee:before, .marquee:after { width: 5rem; }
+  }
+
+
   #nav-dos {
     display: flex;
     flex-direction: column;
@@ -607,12 +682,19 @@ border-radius: 15px;
   bottom: 20px;
   right: 20px;
   z-index: 999;
-}
-
-.whatsapp-logo {
-  width: 56px;
-  height: 56px;
+  background-color: rgb(45, 183, 66);
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.whatsapp-logo {
+font-size: 35px;
+align-items: center;
 }
 .marca {
     color: #ffffff;
@@ -630,12 +712,8 @@ border-radius: 15px;
   /* responsive nav */
   .menu-fijo {
     display: inline;
-    justify-content: center;
-    align-items: center;
-    height: auto;
     position: relative;
     z-index: 999;
-    width: 100%;
     box-shadow:none;
 }
 .menu-fijo .contenedor {
@@ -643,9 +721,9 @@ border-radius: 15px;
 }
 .menu-imagen {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 11px;
 }
 .menu-magiclick {
   font-size: 10px;
@@ -653,6 +731,7 @@ border-radius: 15px;
 .menu-icon-oculto {
   display: block;
   margin-top: 15px;
+  font-size: 21px;
 }
 .buscar {
   display: block;
@@ -672,21 +751,37 @@ border-radius: 15px;
   
 }
 .contenedor li {
-  padding: 0;
-  border-bottom: 1px solid #a7a8aa;
+    padding: 0;
+    border-bottom: 1px solid #888;
 }
 .contenedor a {
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 2px;
+  color: #888;
+  line-height: 25px;
 }
-#lista-uno-principal:hover li {
+.contenedor li:hover a {
   color: #feb142;
 }
+#lista-uno:hover {
+  background: none;
+}
+
 nav {
   display: none;
 }
 .menu-redes {
   display: none;
+}
+.lista-desplegable:hover #desplegable-menu {
+  display: block;
+}
+#desplegable-menu {
+  left: 59%;
+}
+#desplegable-menu a {
+  padding: 2px 7px;
+  font-size: 8px;
 }
 
 section#carousel-inicio {
@@ -696,9 +791,6 @@ section#carousel-inicio {
   height: 165px !important;
 }
 
-.lista-desplegable:hover #desplegable-menu {
-  display: block;
-}
 
  /* responsive disfruta */
 
@@ -723,7 +815,7 @@ section#carousel-inicio {
 .contenedor-cat {
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 32px;
-  max-width: 80%;
+  width: 70%;
   padding-top: 29px;
 }
 
@@ -742,7 +834,7 @@ display: none;
 /* servicios */
 
 .contenedor-servicio {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   flex-direction: column;
   height: auto;
@@ -760,8 +852,8 @@ display: none;
   margin-top: 50px;
 }
 .contenedor-novedad {
-  height: auto;
-  background-size: contain;
+  height: 150px;
+  background-size: cover;
 }
 .contenedor-novedad h1 {
   font-size: 28px;
@@ -785,7 +877,7 @@ padding: 10px 4px;
   flex-direction: column;
 }
 #magiclick {
-  width: 80%;
+  width: 70%;
   margin: 0px auto;
   align-content: center;
   height: auto;
@@ -796,7 +888,7 @@ padding: 10px 4px;
   font-size: 21px;
 }
 .izquierda p {
-  font-size: 14px;
+  font-size: 13px;
   padding: 0px 0px;
 }
 iframe {

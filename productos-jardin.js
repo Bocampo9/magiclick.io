@@ -47,3 +47,16 @@ function cambiarImagen(urlImagen) {
       enlace.style.color = '#000000'; /* Restablece el color al quitar el mouse */
     });
   });  
+
+
+  /* funcion para que los iconos se muevas constantemente */
+
+const root = document.documentElement;
+const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+const marqueeContent = document.querySelector("ul.marquee-content");
+
+root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+for(let i=0; i<marqueeElementsDisplayed; i++) {
+  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+}
